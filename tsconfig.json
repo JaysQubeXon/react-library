@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "outDir": "dist",
+      "target": "es2019",
+      "module": "esnext",
+      "strict": true,
+      "allowJs": true,
+      "declaration": true,
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "removeComments": true,
+      "esModuleInterop": true,
+      "isolatedModules": true,
+      "resolveJsonModule": true,
+      "noImplicitReturns": true,
+      "noUnusedParameters": true,
+      "allowSyntheticDefaultImports": true,
+      "lib": ["DOM", "DOM.iterable", "es2019"],
+      "moduleResolution": "node"
+    },
+    "exclude": ["node_modules", "__tests__"]
+  }

@@ -1,0 +1,95 @@
+{
+    "name": "react-library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Package for starting a new react component library using storybook",
+    "engines": {
+      "node": ">= 12"
+    },
+    "keywords": [
+      "react",
+      "reactjs",
+      "react-library"
+    ],
+    "author": "Noam G Jacobson <noam.jacobson@protonmail.com> (https://github.com/JaysQubeXon)",
+    "homepage": "https://github.com/JaysQubeXon/react-library",
+    "repository": "github:JaysQubeXon/react-library",
+    "bugs": "https://github.com/JaysQubeXon/react-library/issues",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.esm.d.ts",
+    "source": "lib/index.ts",
+    "scripts": {
+      "start": "yarn storybook",
+      "build": "rollup -c rollup.config.js",
+      "test": "jest",
+      "test:watch": "yarn test --watch --notify",
+      "test:coverage": "yarn test --coverage",
+      "lint": "tsc --noEmit && eslint \"lib/**/*.{js,ts,tsx}\" \"*.{js,ts}\"",
+      "lint:fix": "yarn lint --quiet --fix",
+      "clean": "rm -rf ./dist",
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook -o docs-build -s ./lib/stories/assets"
+    },
+    "files": [
+      "dist"
+    ],
+    "contributors": [],
+    "peerDependencies": {
+      "react": ">= 16.8.0 || >= 17.0.0",
+      "react-dom": ">= 16.8.0 || >= 17.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "@babel/core": "^7.15.5",
+      "@rollup/plugin-commonjs": "^21.0.0",
+      "@rollup/plugin-json": "^4.1.0",
+      "@storybook/addon-actions": "^6.3.9",
+      "@storybook/addon-essentials": "^6.3.9",
+      "@storybook/addon-links": "^6.3.9",
+      "@storybook/react": "^6.3.9",
+      "@testing-library/dom": "^8.7.1",
+      "@testing-library/jest-dom": "^5.14.1",
+      "@testing-library/react": "^12.1.1",
+      "@testing-library/react-hooks": "^7.0.2",
+      "@testing-library/user-event": "^13.2.1",
+      "@types/jest": "^27.0.2",
+      "@types/node": "^16.10.2",
+      "@types/react": "^17.0.26",
+      "@types/react-dom": "^17.0.9",
+      "@typescript-eslint/eslint-plugin": "^4.32.0",
+      "@typescript-eslint/parser": "^4.32.0",
+      "rollup-plugin-ts": "^1.4.7",
+      "babel-loader": "^8.2.2",
+      "eslint": "^7.32.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-jest": "^24.5.0",
+      "eslint-plugin-prettier": "^4.0.0",
+      "eslint-plugin-react": "^7.26.1",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "husky": "^7.0.2",
+      "jest": "^27.2.4",
+      "lint-staged": "^11.1.2",
+      "node-notifier": "^10.0.0",
+      "prettier": "^2.4.1",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-test-renderer": "^17.0.2",
+      "rimraf": "^3.0.2",
+      "rollup": "^2.58.0",
+      "rollup-plugin-clear": "^2.0.7",
+      "ts-jest": "^27.0.5",
+      "typescript": "^4.4.3"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "tsc --noEmit && lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.{js,ts,tsx}": [
+        "eslint --fix"
+      ]
+    }
+  }
+  
